@@ -1,5 +1,7 @@
 package com.company.model;
 
+import java.util.Objects;
+
 public class Person {
     private String name;
     private String personalCode;
@@ -45,5 +47,18 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return getAge() == person.getAge() && selfIsolation == person.selfIsolation && getName().equals(person.getName()) && getPersonalCode().equals(person.getPersonalCode()) && getAddress().equals(person.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getPersonalCode(), getAddress(), getAge(), selfIsolation);
     }
 }
