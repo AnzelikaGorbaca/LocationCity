@@ -1,14 +1,14 @@
 package com.company.model;
 
-import java.util.List;
+import java.util.Set;
 
 public abstract class AbstractLocation implements Location {
     private String name;
     private String address;
     private int size;
-    List<Person> persons;
+    protected Set<Person> persons;
 
-    public AbstractLocation(String name, String address, int size, List<Person> persons) {
+    public AbstractLocation(String name, String address, int size, Set<Person> persons) {
         this.name = name;
         this.address = address;
         this.size = size;
@@ -46,12 +46,12 @@ public abstract class AbstractLocation implements Location {
     }
 
     @Override
-    public List<Person> getPersons() {
+    public Set<Person> getPersons() {
         return persons;
     }
 
     @Override
-    public void setPersons(List<Person> persons) {
+    public void setPersons(Set<Person> persons) {
         this.persons = persons;
     }
 }

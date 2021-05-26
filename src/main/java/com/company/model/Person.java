@@ -17,6 +17,14 @@ public class Person {
         this.selfIsolation = false;
     }
 
+    public boolean isSelfIsolation() {
+        return selfIsolation;
+    }
+
+    public void setSelfIsolation(boolean selfIsolation) {
+        this.selfIsolation = selfIsolation;
+    }
+
     public String getName() {
         return name;
     }

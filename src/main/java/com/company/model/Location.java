@@ -1,6 +1,6 @@
 package com.company.model;
 
-import java.util.List;
+import java.util.Set;
 
 public interface Location {
     int getMaxPersons ();
@@ -16,8 +16,8 @@ public interface Location {
 
     void setSize(int size);
 
-    List<Person> getPersons();
+    Set<Person> getPersons();
 
-    void setPersons(List<Person> persons);
+    void setPersons(Set<Person> persons);
 
 }

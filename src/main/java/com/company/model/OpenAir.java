@@ -1,10 +1,10 @@
 package com.company.model;
 
-import java.util.List;
+import java.util.Set;
 
 public abstract class OpenAir extends AbstractLocation {
 
-    public OpenAir(String name, String address, int size, List<Person> persons) {
+    public OpenAir(String name, String address, int size, Set<Person> persons) {
         super(name, address, size, persons);
     }
 

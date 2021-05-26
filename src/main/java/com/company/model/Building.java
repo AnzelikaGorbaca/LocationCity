@@ -1,9 +1,9 @@
 package com.company.model;
 
-import java.util.List;
+import java.util.Set;
 
 public abstract class Building extends AbstractLocation{
-    public Building(String name, String address, int size, List<Person> persons) {
+    public Building(String name, String address, int size, Set<Person> persons) {
         super(name, address, size, persons);
     }
 

@@ -1,16 +1,27 @@
 package com.company.model;
 
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 public class City {
     private String name;
     private List<Location> location;
-    private List<Person> persons;
+    private Set<Person> persons;
 
-    public City(String name, List<Location> location, List<Person> persons) {
+    public City(String name, List<Location> location, Set<Person> persons) {
         this.name = name;
         this.location = location;
         this.persons = persons;
+    }
+
+    public void isolatePersons() {
+        Random random = new Random();
+        for (Person person : persons) {
+            boolean isolation = random.nextBoolean();
+            person.setSelfIsolation(isolation);
+
+        }
     }
 
     public String getName() {
@@ -29,11 +40,11 @@ public class City {
         this.location = location;
     }
 
-    public List<Person> getPersons() {
+    public Set<Person> getPersons() {
         return persons;
     }
 
-    public void setPersons(List<Person> persons) {
+    public void setPersons(Set<Person> persons) {
         this.persons = persons;
     }
 }
