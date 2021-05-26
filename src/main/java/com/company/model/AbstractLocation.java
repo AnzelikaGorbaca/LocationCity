@@ -7,12 +7,14 @@ public abstract class AbstractLocation implements Location {
     private String address;
     private int size;
     List<Person> persons;
+    private int personCounter;
 
     public AbstractLocation(String name, String address, int size, List<Person> persons) {
         this.name = name;
         this.address = address;
         this.size = size;
         this.persons = persons;
+        this.personCounter = 0;
     }
 
     @Override
@@ -53,5 +55,20 @@ public abstract class AbstractLocation implements Location {
     @Override
     public void setPersons(List<Person> persons) {
         this.persons = persons;
+    }
+
+    @Override
+    public int getPersonCounter() {
+        return personCounter;
+    }
+
+    @Override
+    public void countPerson () {
+        this.personCounter ++;
+    }
+
+    @Override
+    public void subtractPerson () {
+        this.personCounter --;
     }
 }

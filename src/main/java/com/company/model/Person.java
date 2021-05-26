@@ -49,6 +49,15 @@ public class Person {
         this.age = age;
     }
 
+    public boolean isSelfIsolation() {
+        return selfIsolation;
+    }
+
+    public void setSelfIsolation(boolean selfIsolation) {
+        this.selfIsolation = selfIsolation;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -60,5 +69,10 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(getName(), getPersonalCode(), getAddress(), getAge(), selfIsolation);
+    }
+
+    @Override
+    public String toString() {
+        return  String.format("\n %-20s %-20s %-20s %-20d",  name, address,personalCode,age);
     }
 }
